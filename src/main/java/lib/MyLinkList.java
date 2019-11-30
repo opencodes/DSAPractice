@@ -1,7 +1,7 @@
 package lib;
 
 public class MyLinkList {
-    Node head;
+    public Node head;
 
     public MyLinkList(){
         this.head = null;
@@ -101,27 +101,36 @@ public class MyLinkList {
             return null;
         }
         Node p1 = head;
-        Node p2;
-        int counter = positionFromLast;
-//        while (p2 != positionFromLast - 1){
-//            curr = curr.next;
-//            p1 = curr;
-//            p2 =
-//        }
-//        while (){
-//
-//        }
+        Node p2 = head;
+        int counter = positionFromLast-1;
 
+        while (counter != 0 && p2.next != null){
+            p2 = p2.next;
+            System.out.printf("p2 " + p2.data);
+            System.out.printf(" p1 " + p1.data  + "\n");
+            counter--;
+        }
+        System.out.printf("---------------------\n" );
+        while (p2.next !=null){
+            p1 = p1.next;
+            p2 = p2.next;
+            System.out.printf("p2 " + p2.data);
+            System.out.printf(" p1 " + p1.data  + "\n");
+        }
+        System.out.printf(positionFromLast +"th element from last is : " + p1.data + "\n");
+        return p1;
     }
     /**
      * Print all element
      */
     public void print(){
         Node currentNode = this.head;
+        System.out.printf("Print Linked List : ");
         while (currentNode != null){
             System.out.printf(""+currentNode.data+", ");
             currentNode = currentNode.next;
         }
+        System.out.printf("\n");
     }
 
     public void reverse(){
@@ -133,7 +142,7 @@ public class MyLinkList {
             prev = curr;
             curr = next;
         }
-        head = prev;
+        head = prev;;
     }
 
     public boolean isEven(){
@@ -148,13 +157,17 @@ public class MyLinkList {
         newLinkedList.insertAtLast(10);
         newLinkedList.insertAtLast(20);
         newLinkedList.insertAtLast(30);
+        newLinkedList.insertAtLast(40);
+        newLinkedList.insertAtLast(50);
+        newLinkedList.insertAtLast(60);
         //newLinkedList.insertAtLast(40);
         //newLinkedList.insertAfter(20, 30);
         //newLinkedList.deleteFromLast();
         //newLinkedList.deleteAfter(20);
-        newLinkedList.insertNodeAtPosition(25, 1);
-        newLinkedList.deleteNodeAtPosition(1);
+//        newLinkedList.insertNodeAtPosition(25, 1);
+//        newLinkedList.deleteNodeAtPosition(1);
 //        newLinkedList.reverse();
+        newLinkedList.getNodeFromLastPosition(2);
         newLinkedList.print();
     }
 }

@@ -173,6 +173,8 @@ public class LinkedListOperations {
         return this.addLinkedList(h1, h2);
     }
 
+
+
     public static void main(String[] args) {
         LinkedListOperations lop = new LinkedListOperations();
         int[] list1 = {1, 9,2,3,4};

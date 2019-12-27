@@ -21,7 +21,7 @@ public class MyStack {
     }
 
     public int pop() {
-        System.out.printf("TOP " + top + "\n");
+//        System.out.printf("TOP " + top + "\n");
         // if stack is not empty
         if (!this.isEmpty()) {
             int curr = arr[top];
@@ -33,7 +33,7 @@ public class MyStack {
 
     public int peak() {
         if (top == -1){
-//            System.out.printf("No Element Exist");
+            //System.out.printf("No Element Exist");
             return -1;
         }
         return arr[top];

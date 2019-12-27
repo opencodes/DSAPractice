@@ -7,10 +7,7 @@ public class MultiLevelLinkedList {
         this.head = null;
     }
 
-    public void insertRight(int data){
-
-    }
-    public void insertDown(int data){
-
+    public static void main(String[] args) {
+        MultiLevelLinkedList ml = new MultiLevelLinkedList();
     }
 }

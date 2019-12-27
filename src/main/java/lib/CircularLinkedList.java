@@ -2,9 +2,11 @@ package lib;
 
 public class CircularLinkedList {
     private Node tail;
+
     private CircularLinkedList(){
         this.tail = null;
     }
+
     private void insert(int data){
         Node  temp = new Node(data);
         if (tail == null){
